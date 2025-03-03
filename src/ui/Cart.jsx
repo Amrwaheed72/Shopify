@@ -1,8 +1,9 @@
-function Hi() {
+function Cart() {
     return (
         <div>
+            
         </div>
     )
 }
 
-export default Hi
+export default Cart
