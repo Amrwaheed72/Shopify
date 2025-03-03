@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { registerLicense } from "@syncfusion/ej2-base";
 
-createRoot(document.getElementById('root')).render(
+registerLicense(
+  "Ngo9BigBOggjHTQxAR8/V1NMaF1cWmhNYVJpR2Nbek5xdF9EaVZRQGY/P1ZhSXxWdkZjW31dc3JXQGdeWUc="
+);
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);
