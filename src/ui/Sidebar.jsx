@@ -4,8 +4,18 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { links } from "../data/dummy";
 import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
+import { useEffect } from "react";
+
 function Sidebar() {
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, setScreensize } =
+    useStateContext();
+
+  function handleCloseSidebar() {
+    if (activeMenu && screenSize <= 900) {
+      setActiveMenu(false);
+    }
+  }
+
   const activeLink =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
   const normalLink =
@@ -18,9 +28,7 @@ function Sidebar() {
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              onClick={() => {
-                setActiveMenu(false);
-              }}
+              onClick={handleCloseSidebar}
               className="mt-4 ml-3 flex items-center gap-3 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white"
             >
               <SiShopware /> <span>Shopify</span>
@@ -47,7 +55,7 @@ function Sidebar() {
                       isActive ? activeLink : normalLink
                     }
                     key={link.name}
-                    onClick={() => {}}
+                    onClick={handleCloseSidebar}
                     to={`/${link.name}`}
                   >
                     {link.icon} <span className="capitalize">{link.name}</span>
