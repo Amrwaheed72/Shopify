@@ -20,7 +20,7 @@ import ColorPicker from "./pages/ColorPicker";
 import Navbar from "./ui/Navbar";
 import Sidebar from "./ui/Sidebar";
 import Footer from "./ui/Footer";
-import { ContextProvider, useStateContext } from "./contexts/ContextProvider";
+import {useStateContext } from "./contexts/ContextProvider";
 
 function App() {
   const { activeMenu } = useStateContext();
