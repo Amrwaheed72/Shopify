@@ -4,10 +4,9 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { links } from "../data/dummy";
 import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
-import { useEffect } from "react";
 
 function Sidebar() {
-  const { activeMenu, setActiveMenu, screenSize, setScreensize } =
+  const { activeMenu, setActiveMenu, screenSize } =
     useStateContext();
 
   function handleCloseSidebar() {

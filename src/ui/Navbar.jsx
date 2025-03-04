@@ -15,10 +15,8 @@ import { useEffect } from "react";
 
 function Navbar() {
   const {
-    activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
@@ -41,7 +39,7 @@ function Navbar() {
       setActiveMenu(true);
     }
   }, [screenSize]);
-  
+
   return (
     <div className="relative flex justify-between p-2 md:mx-6">
       <NavButton
