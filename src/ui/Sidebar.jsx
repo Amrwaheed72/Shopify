@@ -6,8 +6,7 @@ import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
 
 function Sidebar() {
-  const { activeMenu, setActiveMenu, screenSize } =
-    useStateContext();
+  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   function handleCloseSidebar() {
     if (activeMenu && screenSize <= 900) {
@@ -16,7 +15,7 @@ function Sidebar() {
   }
 
   const activeLink =
-    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-black bg-gray-200 text-md m-2";
   const normalLink =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 

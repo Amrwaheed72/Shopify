@@ -14,13 +14,8 @@ import UserProfile from "../components/UserProfile";
 import { useEffect } from "react";
 
 function Navbar() {
-  const {
-    setActiveMenu,
-    isClicked,
-    handleClick,
-    screenSize,
-    setScreenSize,
-  } = useStateContext();
+  const { setActiveMenu, isClicked, handleClick, screenSize, setScreenSize } =
+    useStateContext();
 
   useEffect(() => {
     function handleResize() {
