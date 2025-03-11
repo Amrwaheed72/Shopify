@@ -1,9 +1,11 @@
+import OrdersContent from "../components/Orders/OrdersContent";
+
 function Orders() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <OrdersContent />
+    </div>
+  );
 }
 
-export default Orders
+export default Orders;

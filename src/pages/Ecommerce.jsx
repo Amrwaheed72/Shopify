@@ -1,10 +1,7 @@
-import EcommerceContent from "../components/EcommerceContent";
-
+import EcommerceContent from "../components/Dashboard/EcommerceContent";
 
 function Ecommerce() {
-  return (
-    <EcommerceContent />
-  );
+  return <EcommerceContent />;
 }
 
 export default Ecommerce;

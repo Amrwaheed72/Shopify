@@ -3,11 +3,11 @@ import {
   earningData,
   SparklineAreaData,
   ecomPieChartData,
-} from "../data/dummy";
-import Button from "../ui/Button";
+} from "../../data/dummy";
+import Button from "../../ui/Button";
 import { GoDotFill } from "react-icons/go";
-import SparkLine from "./charts/SparkLine";
-import Stacked from "./charts/Stacked";
+import SparkLine from "../charts/SparkLine";
+import Stacked from "../charts/Stacked";
 
 function EcommerceContent() {
   return (
