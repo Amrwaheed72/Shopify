@@ -1,9 +1,7 @@
+import EmployeesContent from "../components/Employees/EmployeesContent";
+
 function Employees() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <EmployeesContent />;
 }
 
-export default Employees
+export default Employees;
