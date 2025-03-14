@@ -1,8 +1,8 @@
+import CalendarContent from "../components/calendar/CalendarContent"
+
 function Calendar() {
     return (
-        <div>
-            
-        </div>
+      <CalendarContent />
     )
 }
 

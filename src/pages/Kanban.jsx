@@ -1,9 +1,7 @@
+import KanbanContent from "../components/kanban/KanbanContent";
+
 function Kanban() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <KanbanContent />;
 }
 
-export default Kanban
+export default Kanban;
