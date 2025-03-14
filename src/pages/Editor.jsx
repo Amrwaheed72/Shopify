@@ -1,8 +1,8 @@
+import EditorContent from "../components/editor/EditorContent"
+
 function Editor() {
     return (
-        <div>
-            
-        </div>
+        <EditorContent />
     )
 }
 

@@ -1,8 +1,8 @@
+import ColorPickerContent from "../components/colorpicker/ColorPickerContent"
+
 function ColorPicker() {
     return (
-        <div>
-            
-        </div>
+        <ColorPickerContent />
     )
 }
 
