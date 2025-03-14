@@ -1,9 +1,7 @@
+import CustomersContent from "../components/customers/CustomersContent";
+
 function Customers() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <CustomersContent />;
 }
 
-export default Customers
+export default Customers;
