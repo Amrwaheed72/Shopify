@@ -21,6 +21,7 @@ import Navbar from "./ui/Navbar";
 import Sidebar from "./ui/Sidebar";
 import Footer from "./ui/Footer";
 import { useStateContext } from "./contexts/ContextProvider";
+import ThemeSettings from "./ui/ThemeSettings";
 
 function App() {
   const { activeMenu } = useStateContext();
@@ -56,6 +57,7 @@ function App() {
               <Navbar />
             </div>
             <div>
+              <ThemeSettings />
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />
