@@ -1,4 +1,4 @@
-import avatar from "../../public/amr.jpg";
+import avatar from "/amr.jpg";
 import { useStateContext } from "../contexts/ContextProvider";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavButton from "./NavButton";
@@ -14,8 +14,14 @@ import UserProfile from "../components/UserProfile";
 import { useEffect } from "react";
 
 function Navbar() {
-  const { setActiveMenu, isClicked, handleClick, screenSize, setScreenSize } =
-    useStateContext();
+  const {
+    setActiveMenu,
+    isClicked,
+    handleClick,
+    screenSize,
+    setScreenSize,
+    currentColor,
+  } = useStateContext();
 
   useEffect(() => {
     function handleResize() {
@@ -40,27 +46,27 @@ function Navbar() {
       <NavButton
         title="Menu"
         customFunction={() => setActiveMenu((prev) => !prev)}
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu />}
       />
       <div className="flex">
         <NavButton
           title="Cart"
           customFunction={() => handleClick("cart")}
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           customFunction={() => handleClick("chat")}
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
           dotColor="#03c9d7"
         />
         <NavButton
           title="Notifications"
           customFunction={() => handleClick("notifications")}
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
           dotColor="#03c9d7"
         />

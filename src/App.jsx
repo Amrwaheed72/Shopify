@@ -24,18 +24,25 @@ import { useStateContext } from "./contexts/ContextProvider";
 import ThemeSettings from "./ui/ThemeSettings";
 
 function App() {
-  const { activeMenu } = useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+  } = useStateContext();
   // const activeMenu=true
   return (
-    <div>
+    <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="dark:bg-main-dark-bg relative flex">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
               <button
-                className="hover:bg-light-gray p-3 text-3xl text-white hover:drop-shadow-xl"
+                className="hover:bg-light-gray cursor-pointer p-3 text-3xl text-white hover:drop-shadow-xl"
                 type="button"
-                style={{ background: "blue", borderRadius: "50%" }}
+                onClick={() => setThemeSettings(true)}
+                style={{ background: currentColor, borderRadius: "50%" }}
               >
                 <FiSettings />
               </button>
@@ -51,13 +58,13 @@ function App() {
             </div>
           )}
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? "md:ml-72" : "flex-2"}`}
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${activeMenu ? "md:ml-72" : "flex-2"}`}
           >
             <div className="bg-main-bg dark:bg-main-dark-bg navbar fixed w-full md:static">
               <Navbar />
             </div>
             <div>
-              <ThemeSettings />
+              {themeSettings && <ThemeSettings />}
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />

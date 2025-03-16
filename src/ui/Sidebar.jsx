@@ -6,7 +6,8 @@ import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
 
 function Sidebar() {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } =
+    useStateContext();
 
   function handleCloseSidebar() {
     if (activeMenu && screenSize <= 900) {
@@ -49,6 +50,9 @@ function Sidebar() {
                 <p className="m-3 mt-4 text-gray-400 uppercase">{item.title}</p>
                 {item.links.map((link) => (
                   <NavLink
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : "",
+                    })}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
