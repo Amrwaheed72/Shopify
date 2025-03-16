@@ -1,9 +1,7 @@
+import AreaChart from "../../components/charts/AreaChart";
+
 function Area() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <AreaChart />;
 }
 
-export default Area
+export default Area;

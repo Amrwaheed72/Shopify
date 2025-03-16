@@ -1,9 +1,7 @@
+import PyramidContent from "../../components/charts/PyramidContent";
+
 function Pyramid() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <PyramidContent />;
 }
 
-export default Pyramid
+export default Pyramid;

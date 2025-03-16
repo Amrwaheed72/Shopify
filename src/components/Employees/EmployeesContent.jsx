@@ -23,9 +23,9 @@ import Header from "../..//ui/Header";
 
 function EmployeesContent() {
   return (
-    <div className="dark:bg-main-dark-bg m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
+    <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10 dark:bg-main-dark-bg">
       <Header title="Orders" category="Page" />
-      <GridComponent
+      <GridComponent 
         dataSource={employeesData}
         allowPaging
         allowSorting

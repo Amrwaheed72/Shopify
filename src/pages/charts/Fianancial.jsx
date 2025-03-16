@@ -1,8 +1,8 @@
+import FinancialContent from "../../components/charts/FinancialContent"
+
 function Fianancial() {
     return (
-        <div>
-            
-        </div>
+        <FinancialContent />
     )
 }
 

@@ -15,7 +15,7 @@ import {
   stackedPrimaryYAxis,
 } from "../../data/dummy";
 
-function Stacked({ width, height }) {
+function StackedContent({ width, height }) {
   return (
     <ChartComponent
       width={width}
@@ -25,7 +25,7 @@ function Stacked({ width, height }) {
       primaryYAxis={stackedPrimaryYAxis}
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
-      legendSettings={{background:"white"}}
+      legendSettings={{ background: "white" }}
     >
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
       <SeriesCollectionDirective>
@@ -37,4 +37,4 @@ function Stacked({ width, height }) {
   );
 }
 
-export default Stacked;
+export default StackedContent;

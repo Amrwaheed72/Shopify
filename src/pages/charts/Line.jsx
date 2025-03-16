@@ -1,9 +1,6 @@
+import LineContent from "../../components/charts/LineContent";
 function Line() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <LineContent />;
 }
 
-export default Line
+export default Line;

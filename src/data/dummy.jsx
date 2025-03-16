@@ -583,10 +583,6 @@ export const links = [
         icon: <RiStockLine />,
       },
       {
-        name: "color-mapping",
-        icon: <BsBarChart />,
-      },
-      {
         name: "pyramid",
         icon: <GiLouvrePyramid />,
       },

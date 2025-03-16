@@ -3,7 +3,7 @@ import { earningData, SparklineAreaData } from "../../data/dummy";
 import Button from "../../ui/Button";
 import { GoDotFill } from "react-icons/go";
 import SparkLine from "../charts/SparkLine";
-import Stacked from "../charts/Stacked";
+import Stacked from "../charts/StackedContent";
 import { useStateContext } from "../../contexts/ContextProvider";
 
 function EcommerceContent() {

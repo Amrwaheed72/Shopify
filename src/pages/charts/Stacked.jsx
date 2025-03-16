@@ -1,9 +1,7 @@
+import StackedContent from "../../components/charts/StackedContent";
+
 function Stacked() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <StackedContent />;
 }
 
-export default Stacked
+export default Stacked;

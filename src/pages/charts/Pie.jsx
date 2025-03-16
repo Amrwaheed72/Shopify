@@ -1,8 +1,8 @@
+import PieChart2 from "../../components/charts/PieChart2"
+
 function Pie() {
     return (
-        <div>
-            
-        </div>
+      <PieChart2 />
     )
 }
 

@@ -1,8 +1,8 @@
+import BarChartContent from "../../components/charts/BarChartContent"
+
 function Bar() {
     return (
-        <div>
-            
-        </div>
+       <BarChartContent />
     )
 }
 
