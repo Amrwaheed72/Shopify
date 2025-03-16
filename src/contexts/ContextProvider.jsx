@@ -16,6 +16,7 @@ function ContextProvider({ children }) {
   const [currentColor, setCurrentColor] = useState("#03c9d7");
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
+  const [cart, setCart] = useState(false);
   function setMode(e) {
     setCurrentMode(e.target.value);
 
@@ -31,6 +32,9 @@ function ContextProvider({ children }) {
 
   function handleClick(clicked) {
     setIsClicked({ ...initialState, [clicked]: true });
+  }
+  function handleCloseClick(clicked){
+    setIsClicked({ ...initialState, [clicked]: false });
   }
   return (
     <StateContext.Provider
@@ -50,6 +54,9 @@ function ContextProvider({ children }) {
         setCurrentMode,
         themeSettings,
         setThemeSettings,
+        cart,
+        setCart,
+        handleCloseClick
       }}
     >
       {children}

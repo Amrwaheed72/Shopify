@@ -64,6 +64,29 @@ export const gridOrderStatus = (props) => (
   </button>
 );
 
+export const CartData = [
+  {
+    title: "butterScotch ice-cream",
+    subtitle: "Milk Product",
+    quantity: "0",
+    price: "$250",
+    img: product2,
+  },
+  {
+    title: "Supreme fresh-tomato",
+    subtitle: "Vegetable item",
+    quantity: "0",
+    price: "$250",
+    img: product3,
+  },
+  {
+    title: "Red color candy",
+    subtitle: "Food item",
+    quantity: "0",
+    price: "$250",
+    img: product4,
+  },
+];
 export const kanbanGrid = [
   { headerText: "To Do", keyField: "Open", allowToggle: true },
 
