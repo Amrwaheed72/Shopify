@@ -40,7 +40,7 @@ export default {
                 590: '590px',
             },
             backgroundImage: {
-                'hero-pattern': "url('https://img.freepik.com/premium-vector/young-woman-operator-customer-service-working-call-centre-talking-with-customer_535862-940.jpg?w=740')",
+                'hero-pattern': "url('https://helplama.com/wp-content/uploads/2020/08/main-3.png')",
             },
         },
     },

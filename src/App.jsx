@@ -22,6 +22,7 @@ import Sidebar from "./ui/Sidebar";
 import Footer from "./ui/Footer";
 import { useStateContext } from "./contexts/ContextProvider";
 import ThemeSettings from "./ui/ThemeSettings";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   const {
@@ -86,6 +87,7 @@ function App() {
                 <Route path="/financial" element={<Fianancial />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
+                <Route path="*" element={<PageNotFound />} />
               </Routes>
             </div>
           </div>

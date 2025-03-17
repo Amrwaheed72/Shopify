@@ -10,7 +10,7 @@ function Chat() {
 
   useOutsideClick(closeRef, () => handleCloseClick("chat"));
   return (
-    <div className="bg-half-transparent fixed top-10 right-36 z-20 dark:bg-transparent">
+    <div className="bg-half-transparent fixed top-10 right-4 z-20 sm:right-18 md:right-36 dark:bg-transparent">
       {isClicked && (
         <div
           ref={closeRef}
@@ -29,9 +29,13 @@ function Chat() {
           </div>
           {chatData.map((item, index) => (
             <div key={index} className="mt-4 p-4">
-              <div className="flex items-center justify-center border-b-1 p-5 gap-6">
-                <img alt="hi" className="h-12 w-12 rounded-full" src={item.image} />
-                <div className="flex flex-col justify-center flex-wrap">
+              <div className="flex items-center justify-center gap-6 border-b-1 p-5">
+                <img
+                  alt="hi"
+                  className="h-12 w-12 rounded-full"
+                  src={item.image}
+                />
+                <div className="flex flex-col flex-wrap justify-center">
                   <p className="font-bold">{item.name}</p>
                   <p className="text-sm">{item.subtext}</p>
                   <p className="text-sm text-gray-400">{item.time}</p>

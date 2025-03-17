@@ -11,7 +11,7 @@ function UserProfile() {
 
   useOutsideClick(closeRef, () => handleCloseClick("notifications"));
   return (
-    <div className="bg-half-transparent fixed top-10 right-36 z-20 dark:bg-transparent">
+    <div className="bg-half-transparent fixed top-10 right-4 z-20 sm:right-18 md:right-36 dark:bg-transparent">
       {isClicked && (
         <div
           ref={closeRef}
