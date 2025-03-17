@@ -66,7 +66,7 @@ export const gridOrderStatus = (props) => (
 
 export const CartData = [
   {
-    id:1,
+    id: 1,
     title: "butterScotch ice-cream",
     subtitle: "Milk Product",
     quantity: "0",
@@ -74,7 +74,7 @@ export const CartData = [
     img: product2,
   },
   {
-    id:2,
+    id: 2,
     title: "Supreme fresh-tomato",
     subtitle: "Vegetable item",
     quantity: "0",
@@ -82,7 +82,7 @@ export const CartData = [
     img: product3,
   },
   {
-    id:3,
+    id: 3,
     title: "Red color candy",
     subtitle: "Food item",
     quantity: "0",
@@ -90,6 +90,42 @@ export const CartData = [
     img: product4,
   },
 ];
+
+export const chatData = [
+  {
+    id: 1,
+    name: "Roman betengan ahmed",
+    message: "Joined the Team!",
+    subtext: "Congratulate him",
+    time: "9:08 AM",
+    image: avatar,
+  },
+  {
+    id: 2,
+    name: "Salma mohamed ahmed ",
+    message: "New message received",
+    subtext: "Salma sent you a new message",
+    time: "11:56 AM",
+    image: avatar2,
+  },
+  {
+    id: 3,
+    name: "New Payment Client witch ",
+    message: "New Payment received",
+    subtext: "Check your earnings",
+    time: "4:39 AM",
+    image: avatar3,
+  },
+  {
+    id: 4,
+    name: "Jolly Molly Holly Folly Dolly",
+    message: "Jolly completed tasks",
+    subtext: "Assign her new tasks",
+    time: "1:12 AM",
+    image: avatar4,
+  },
+];
+
 export const kanbanGrid = [
   { headerText: "To Do", keyField: "Open", allowToggle: true },
 
@@ -638,33 +674,6 @@ export const cartData = [
     name: "Red color candy",
     category: "Food Item",
     price: "$190",
-  },
-];
-
-export const chatData = [
-  {
-    image: avatar2,
-    message: "Roman Joined the Team!",
-    desc: "Congratulate him",
-    time: "9:08 AM",
-  },
-  {
-    image: avatar3,
-    message: "New message received",
-    desc: "Salma sent you new message",
-    time: "11:56 AM",
-  },
-  {
-    image: avatar4,
-    message: "New Payment received",
-    desc: "Check your earnings",
-    time: "4:39 AM",
-  },
-  {
-    image: avatar,
-    message: "Jolly completed tasks",
-    desc: "Assign her new tasks",
-    time: "1:12 AM",
   },
 ];
 

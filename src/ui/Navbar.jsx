@@ -85,7 +85,7 @@ function Navbar() {
         </TooltipComponent>
         {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
-        {isClicked.notification && <Notification />}
+        {isClicked.notifications && <Notification />}
         {isClicked.userProfile && <UserProfile />}
       </div>
     </div>

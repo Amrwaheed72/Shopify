@@ -7,7 +7,7 @@ const initialState = {
   chat: false,
   cart: false,
   userProfile: false,
-  notification: false,
+  notifications: false,
 };
 
 function ContextProvider({ children }) {
@@ -21,14 +21,14 @@ function ContextProvider({ children }) {
   const [count, setCount] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
 
-  function increment(id, price) {
+  function increment(id) {
     setCount((prev) => {
       const newCount = { ...prev, [id]: (prev[id] || 1) + 1 };
       return newCount;
     });
   }
 
-  function decrement(id, price) {
+  function decrement(id) {
     setCount((prevCounts) => {
       const newCount = {
         ...prevCounts,
@@ -38,7 +38,6 @@ function ContextProvider({ children }) {
     });
   }
 
-  // Recalculate total price whenever count changes
   useEffect(() => {
     let newTotal = 0;
     Object.entries(count).forEach(([id, qty]) => {
@@ -65,7 +64,6 @@ function ContextProvider({ children }) {
   function handleClick(clicked) {
     setIsClicked({ ...initialState, [clicked]: true });
   }
-
   function handleCloseClick(clicked) {
     setIsClicked({ ...initialState, [clicked]: false });
   }
