@@ -66,24 +66,27 @@ export const gridOrderStatus = (props) => (
 
 export const CartData = [
   {
+    id:1,
     title: "butterScotch ice-cream",
     subtitle: "Milk Product",
     quantity: "0",
-    price: "$250",
+    price: 100,
     img: product2,
   },
   {
+    id:2,
     title: "Supreme fresh-tomato",
     subtitle: "Vegetable item",
     quantity: "0",
-    price: "$250",
+    price: 155,
     img: product3,
   },
   {
+    id:3,
     title: "Red color candy",
     subtitle: "Food item",
     quantity: "0",
-    price: "$250",
+    price: 210,
     img: product4,
   },
 ];

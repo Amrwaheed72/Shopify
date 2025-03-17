@@ -2,18 +2,16 @@ import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
 import { useRef } from "react";
 import useOutsideClick from "../hooks/useOutsideClick";
-import product2 from "../data/product2.jpg";
-import product3 from "../data/product3.jpg";
-import product4 from "../data/product4.jpg";
 import Product from "./Product";
 import { CartData } from "../data/dummy";
 
 function Cart() {
-  const { handleCloseClick, isClicked } = useStateContext();
+  const { handleCloseClick, isClicked, totalPrice } = useStateContext();
   const closeCart = useRef(null);
   useOutsideClick(closeCart, () => handleCloseClick("cart"));
+
   return (
-    <div className="dark:bg-main-dark-bg bg-half-transparent w-scree fixed top-0 right-0 z-20">
+    <div className="bg-half-transparent fixed top-0 right-0 z-20 w-screen dark:bg-transparent">
       {isClicked && (
         <div
           ref={closeCart}
@@ -30,17 +28,19 @@ function Cart() {
               <MdOutlineCancel />
             </button>
           </div>
-          <div className="flex h-full w-full flex-col gap-20">
+          <div className="flex w-full flex-col gap-20">
             {CartData.map((item, index) => (
-              <Product
-                key={index}
-                title={item.title}
-                subtitle={item.subtitle}
-                img={item.img}
-                price={item.price}
-                quantity={item.quantity}
-              />
+              <Product key={index} item={item} />
             ))}
+          </div>
+          <div className="flex justify-between border-t p-4">
+            <p className="text-xl font-semibold">Total Price :</p>
+            <p className="text-xl font-semibold">{totalPrice}</p>
+          </div>
+          <div className="mt-4 flex w-full justify-center">
+            <button className="h-10 w-80 cursor-pointer rounded-2xl bg-blue-700 text-center text-white">
+              Order Now
+            </button>
           </div>
         </div>
       )}

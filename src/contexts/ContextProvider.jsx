@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { CartData } from "../data/dummy";
 
 const StateContext = createContext();
 
@@ -17,15 +18,46 @@ function ContextProvider({ children }) {
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
   const [cart, setCart] = useState(false);
+  const [count, setCount] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  function increment(id, price) {
+    setCount((prev) => {
+      const newCount = { ...prev, [id]: (prev[id] || 1) + 1 };
+      return newCount;
+    });
+  }
+
+  function decrement(id, price) {
+    setCount((prevCounts) => {
+      const newCount = {
+        ...prevCounts,
+        [id]: prevCounts[id] > 1 ? prevCounts[id] - 1 : 1,
+      };
+      return newCount;
+    });
+  }
+
+  // Recalculate total price whenever count changes
+  useEffect(() => {
+    let newTotal = 0;
+    Object.entries(count).forEach(([id, qty]) => {
+      const product = CartData.find((item) => item.id === Number(id));
+      if (product) {
+        newTotal += qty * product.price;
+      }
+    });
+    setTotalPrice(newTotal);
+  }, [count]);
+
   function setMode(e) {
     setCurrentMode(e.target.value);
-
     localStorage.setItem("themeMode", e.target.value);
     setThemeSettings(false);
   }
+
   function setColor(mode) {
     setCurrentColor(mode);
-
     localStorage.setItem("ColorMode", mode);
     setThemeSettings(false);
   }
@@ -33,9 +65,11 @@ function ContextProvider({ children }) {
   function handleClick(clicked) {
     setIsClicked({ ...initialState, [clicked]: true });
   }
-  function handleCloseClick(clicked){
+
+  function handleCloseClick(clicked) {
     setIsClicked({ ...initialState, [clicked]: false });
   }
+
   return (
     <StateContext.Provider
       value={{
@@ -56,7 +90,11 @@ function ContextProvider({ children }) {
         setThemeSettings,
         cart,
         setCart,
-        handleCloseClick
+        handleCloseClick,
+        count,
+        increment,
+        decrement,
+        totalPrice,
       }}
     >
       {children}
@@ -65,8 +103,7 @@ function ContextProvider({ children }) {
 }
 
 function useStateContext() {
-  const context = useContext(StateContext);
-  return context;
+  return useContext(StateContext);
 }
 
 export { ContextProvider, useStateContext };
