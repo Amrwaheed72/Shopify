@@ -30,7 +30,7 @@ function UserProfile() {
           </div>
           <div className="mt-4">
             <div className="flex items-center justify-center gap-10 p-6">
-              <img className="h-28 w-28 rounded-full" src={amr} />
+              <img alt="hi" className="h-28 w-28 rounded-full" src={amr} />
               <div className="flex flex-col flex-wrap justify-center">
                 <p className="font-bold">Amr Waheed</p>
                 <p className="text-sm">Full Stack developer</p>

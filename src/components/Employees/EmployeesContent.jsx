@@ -1,22 +1,14 @@
 import {
   employeesData,
-  contextMenuItems,
   employeesGrid,
 } from "../../data/dummy";
 import {
   ColumnDirective,
   ColumnsDirective,
-  ContextMenu,
-  Edit,
-  ExcelExport,
-  Filter,
   GridComponent,
   Inject,
   Page,
-  PdfExport,
-  Resize,
   Search,
-  Sort,
   Toolbar,
 } from "@syncfusion/ej2-react-grids";
 import Header from "../..//ui/Header";

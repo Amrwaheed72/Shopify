@@ -30,7 +30,7 @@ function Notification() {
           {chatData.map((item, index) => (
             <div key={index} className="mt-4 p-4">
               <div className="flex items-center justify-between border-b-1 p-5">
-                <img className="h-12 w-12 rounded-full" src={item.image} />
+                <img alt="hi" className="h-12 w-12 rounded-full" src={item.image} />
                 <div className="flex flex-col flex-wrap justify-center">
                   <p className="font-bold">{item.name}</p>
                   <p className="text-sm">{item.message}</p>

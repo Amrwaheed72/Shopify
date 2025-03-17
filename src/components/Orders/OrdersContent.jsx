@@ -1,4 +1,4 @@
-import { ordersData, contextMenuItems, ordersGrid } from "../../data/dummy";
+import { ordersData, ordersGrid } from "../../data/dummy";
 import {
   ColumnDirective,
   ColumnsDirective,

@@ -10,7 +10,7 @@ function Product({ item }) {
     <>
       <div className="mt-2 flex h-32 w-full items-center justify-between border-b-1 p-6 pb-20">
         <div className="h-20 w-20">
-          <img className="rounded-xl" src={img} />
+          <img alt="hi" className="rounded-xl" src={img} />
         </div>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">

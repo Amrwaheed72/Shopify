@@ -75,7 +75,7 @@ function Navbar() {
             className="hover:bg-light-gray flex cursor-pointer items-center gap-2 rounded-lg p-1"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="h-8 w-8 rounded-full" src={avatar} />
+            <img alt="hi" className="h-8 w-8 rounded-full" src={avatar} />
             <p>
               <span className="text-14 text-gray-400">Hi, </span> {"  "}
               <span className="text-14 ml-1 font-bold text-gray-400">Amr</span>

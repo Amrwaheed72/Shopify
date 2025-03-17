@@ -1,4 +1,3 @@
-import { BsCurrencyDollar } from "react-icons/bs";
 import { earningData, SparklineAreaData } from "../../data/dummy";
 import Button from "../../ui/Button";
 import { GoDotFill } from "react-icons/go";

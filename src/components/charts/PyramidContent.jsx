@@ -5,7 +5,6 @@ import {
   AccumulationSeriesCollectionDirective,
   AccumulationSeriesDirective,
   Inject,
-  PieSeries,
   PyramidSeries,
 } from "@syncfusion/ej2-react-charts";
 import { PyramidData } from "../../data/dummy";

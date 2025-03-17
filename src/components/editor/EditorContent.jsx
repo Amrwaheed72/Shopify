@@ -8,7 +8,6 @@ import {
   Toolbar,
 } from "@syncfusion/ej2-react-richtexteditor";
 import Header from "../../ui/Header";
-import { EditorData } from "../../data/dummy";
 
 function EditorContent() {
   return (
